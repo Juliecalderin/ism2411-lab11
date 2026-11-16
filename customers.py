@@ -29,3 +29,12 @@ try:
     print(customer["email"])
 except KeyError:
     print("KeyError: no email key in this customer")
+
+# Exercise 4: Iterate
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+# Looping without .items() only gives you the keys, not the values.
+# .items() gives you each key AND its value together, so you can print both.
+for key in customer:
+    print(key)
