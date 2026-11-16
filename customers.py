@@ -38,3 +38,14 @@ for key, value in customer.items():
 # .items() gives you each key AND its value together, so you can print both.
 for key in customer:
     print(key)
+
+# Exercise 5: Lookup table
+tier_discounts = {"bronze": 0, "silver": .05, "gold": .10, "platinum": .15}
+
+discount = tier_discounts.get(customer["tier"], 0)
+purchase = 200
+final_price = purchase * (1 - discount)
+
+print("Tier:", customer["tier"])
+print("Discount:", f"{discount:.0%}")
+print("Final price:", f"${final_price:.2f}")
