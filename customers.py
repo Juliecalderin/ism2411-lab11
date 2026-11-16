@@ -1,3 +1,20 @@
+# Reflection
+#
+# Q1: In Exercise 3 you saw the difference between .get() and bracket notation.
+# When in real work would you use each one, and what's your rule of thumb?
+# I use .get() when a key might be missing, like optional customer info such as
+# an email or phone number, because it returns a default instead of crashing.
+# I use bracket notation when the key must exist, like a required ID, because
+# I want the KeyError to show me right away that something is wrong.
+# My rule of thumb: .get() if missing is normal, brackets if missing is a bug.
+#
+# Q2: Exercise 8 built a summary dictionary with a loop. What does this remind
+# you of from Excel, and why might Python be more useful for large datasets?
+# It reminds me of a pivot table or a SUMIF, where you add up amounts for each
+# category like region. Python is more useful for large datasets because it
+# handles millions of rows without slowing down or freezing like a spreadsheet.
+# It is also repeatable, so I can rerun the same code on new data.
+
 # Exercise 1: One customer
 customer = {
     "name": "Alice",
