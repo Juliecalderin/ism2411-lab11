@@ -61,3 +61,13 @@ for c in customers:
     rate = tier_discounts.get(c["tier"], 0)
     amount = 300 * rate
     print(f"{c['name']} | {c['tier']} | discount: ${amount:.2f}")
+
+# Exercise 7: Nested catalog
+catalog = {
+    "Widget A": {"price": 9.99, "stock": 150},
+    "Gadget C": {"price": 49.99, "stock": 8}
+}
+
+for product, info in catalog.items():
+    if info["stock"] < 20:
+        print(f"LOW STOCK: {product} (only {info['stock']} left)")
