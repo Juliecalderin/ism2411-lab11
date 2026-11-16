@@ -21,3 +21,11 @@ print(customer)
 
 del customer["email"]
 print(customer)
+
+# Exercise 3: Safe lookup
+print(customer.get("email", "no email on file"))
+
+try:
+    print(customer["email"])
+except KeyError:
+    print("KeyError: no email key in this customer")
